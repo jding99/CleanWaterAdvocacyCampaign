@@ -21,7 +21,7 @@
 }
 
  .button {
-   background: #e84141;
+   background: #ffffff;
    background-image: -webkit-linear-gradient(top, #d32f2f, #c73737);
    background-image: -moz-linear-gradient(top, #d32f2f, #c73737);
    background-image: -ms-linear-gradient(top, #d32f2f, #c73737);
@@ -37,6 +37,7 @@
    text-decoration: none;
    text-align:center;
    top: 50%;
+   float: center;
  }
 
  .button:hover {
@@ -49,6 +50,7 @@
    text-decoration: none;
  }
 
+
  .fifth {
      text-align: center;
  }
@@ -60,7 +62,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    background: url(../img/painkiller-1.jpg) no-repeat center center scroll;
+    background: url(../img/rivermainpicture.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -73,9 +75,9 @@
 
 .headline h1 {
     font-size: 130px;
-    background: #fff;
-    background: rgba(255,255,255,0.8);
-    color: black;
+    /*background: #fff;
+    background: rgba(255,255,255,0.8);*/
+    color: white;
 }
 
 .headline h2 {
