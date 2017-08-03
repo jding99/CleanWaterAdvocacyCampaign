@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
-
+	 <script
+		  src="http://code.jquery.com/jquery-3.2.1.min.js"
+		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		  crossorigin="anonymous">
+  	</script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,8 +61,7 @@
 <!-- 	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   -->
-	<iframe name="hidden_iframe" id="hidden_iframe" onload="if(this.submitted) {window.location='/';} style="width:0; height:0; border:0; border:none;"></iframe>
-	<form id="gform" action="https://script.google.com/macros/s/AKfycbxhCDdhv_jaei4ljNZcb_tFoeBCJIp70VVBdwnosPviLeUdwYoi/exec" method="post" target="hidden_iframe" onsubmit="this.submitted=true"> 
+	<form id="gform" action="https://script.google.com/macros/s/AKfycbxhCDdhv_jaei4ljNZcb_tFoeBCJIp70VVBdwnosPviLeUdwYoi/exec" method="post"> 
 		<fieldset class="pure-group">
 		  <label for="first_name">First Name: </label>
 		  <input id="first_name" name="first_name"/>
@@ -77,23 +80,43 @@
 			Must be a valid email address</span>
 		</fieldset>
 		<div align="center" class="featurette" id="fifth">
-			<button class="btn btn-primary" type="submit">
+
+			<span class="input-group-addon" id="submit-btn">
+            	<button type="submit" class="btn btn-primary">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Submit Public Comment</button>
+            </span>
+
+
+			<!-- <button class="btn btn-primary" type="submit">
 				Submit Public Comment
-		  </button>
+		  </button> -->
 		</div>
 	 </form>
+	
 
-	<script type="application/javascript">
-		document.getElementById("gform").submit(function () 
-		{
-			$.post($(this).attr('action'), $(this).serialize(), function () 
-			{
-		window.location.href = "https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001"
-		})})>
-		
-	</script>
+	 <!-- <script type="text/javascript">
+		$(function() {
+	    $('#gform').submit(function(){
+	    $.post($(this).attr('action'), $(this).serialize(), function() {
+	    window.location = '#';
+	    alert("Thanks! We'll be in touch in the next 24 hours.")
+	    $("#gform")[0].reset()
+	    });
+	    return false;
+    });
+    </script> -->
 
-		<hr class="featurette-divider">
+  	<script type="text/javascript">
+  // Form submission redirect
+  		$(function() {
+    	$('#gform').submit(function(){
+      	$.post($(this).attr('action'), $(this).serialize(), function() {
+        window.location.href = "https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001"
+      	});
+      	return false;
+    	});
+  	});
+  </script>
 
 		<!-- Second Featurette -->
 		<div class="featurette" id="second">
@@ -106,29 +129,27 @@
 
 		<hr class="featurette-divider">
 
-		<!-- Third Featurette -->
+		<!-- Third Featurette NEED TO ADD ANCHOR TAGS ONCE PUSHED TO GITHUB -->
 		<div class="featurette" id="third">
-			<img class="featurette-image img-responsive pull-right" src="img/graph-2.png">
-			<h2 class="featurette-heading">This crisis is
-				<span class="text-muted">preventable.</span>
+			<img class="featurette-image img-circle img-responsive pull-right" src="img/facebook-share.png" height="200" width="200">
+			<img class="featurette-image img-circle img-responsive pull-right" src="img/twitter-share.png" height="200" width="200">
+			<img class="featurette-image img-circle img-responsive pull-right" src="img/email-share.png" height="200" width="200">
+			<h2 class="featurette-heading">Let's Save Our Water. Together.
+				<span class="text-muted">Share this campaign to amplify your voice!</span>
 			</h2>
-			<p class="lead">PA has the sixth most overdose deaths in the country. We need to join the multiple states that have already limited fire-time opioid prescriptions to 7 days. </p>
 		</div>
+<!-- 
+<div class="container standAlone">
+    <div class="row">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://marchonhealth.com/" target="_blank">
+        <img src="../assets/share/facebook-share.png" class="social">
+      </a>
+      <a href="http://twitter.com/share?text=The fight to save healthcare is not over:&url=https://marchonhealth.com/&hashtags=BuryTheBill,MarchOnHealth" target="_blank">
+        <img src="../assets/share/twitter-share.png" class="social">
+      </a>
+    </div>
 
-		<hr class="featurette-divider">
-
-		<!-- Fourth Featurette -->
-		<div class="featurette" id="fourth">
-			<img class="featurette-image img-circle img-responsive pull-right" src="img/wolf.jpg" height="500" width="500">
-			<h2 class="featurette-heading">This Happens Together.
-			  <br />
-				<span class="text-muted">Mass Calls Work.</span>
-			</h2>
-			<p class="lead">We’re organizing groups of 50 PA citizens at a time to let Governor Tom Wolf know opioid prescription needs hard limits, not recommendations.</p>
-		</div>
-
-
-	</div>
+	</div> -->
 	<!-- /.container -->
 
 	<!-- Represently footer and privacy policy -->
