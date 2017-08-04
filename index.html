@@ -58,20 +58,17 @@
 
 		<!-- Email Form  -->
 
-<!-- 	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  -->
-	<form id="gform" action="https://script.google.com/macros/s/AKfycbxhCDdhv_jaei4ljNZcb_tFoeBCJIp70VVBdwnosPviLeUdwYoi/exec" method="post"> 
+	<form id="gform" action="https://script.google.com/macros/s/AKfycbxhCDdhv_jaei4ljNZcb_tFoeBCJIp70VVBdwnosPviLeUdwYoi/exec" method="post" align = "center"> 
 		<fieldset class="pure-group">
 		  <label for="first_name">First Name: </label>
 		  <input id="first_name" name="first_name"/>
 		</fieldset>
-
+		<br />
 		<fieldset class="pure-group">
 		  <label for="last_name">Last Name: </label>
 		  <input id="last_name" name="last_name" >
 		</fieldset>
-
+		<br />
 		<fieldset class="pure-group">
 		  <label for="email">Your Email Address:</label>
 		  <input id="email" name="email" type="email" value=""
@@ -79,32 +76,15 @@
 		  <span id="email-invalid" style="display:none">
 			Must be a valid email address</span>
 		</fieldset>
+		<br />
 		<div align="center" class="featurette" id="fifth">
 
 			<span class="input-group-addon" id="submit-btn">
             	<button type="submit" class="btn btn-primary">
                 <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Submit Public Comment</button>
             </span>
-
-
-			<!-- <button class="btn btn-primary" type="submit">
-				Submit Public Comment
-		  </button> -->
 		</div>
 	 </form>
-	
-
-	 <!-- <script type="text/javascript">
-		$(function() {
-	    $('#gform').submit(function(){
-	    $.post($(this).attr('action'), $(this).serialize(), function() {
-	    window.location = '#';
-	    alert("Thanks! We'll be in touch in the next 24 hours.")
-	    $("#gform")[0].reset()
-	    });
-	    return false;
-    });
-    </script> -->
 
   	<script type="text/javascript">
   // Form submission redirect
@@ -117,9 +97,10 @@
     	});
   	});
   </script>
-
+		<hr class="featurette-divider">
 		<!-- Second Featurette -->
 		<div class="featurette" id="second">
+			<img class="featurette-image img-responsive" src="img/fishingcleanwater.jpg" id='pic'>
 			<h2 class="featurette-heading">We will direct you to the EPA's commenting portal where you can 
 				<span class="text-muted">share your story.</span>
 			</h2>
@@ -129,35 +110,24 @@
 
 		<hr class="featurette-divider">
 
-		<!-- Third Featurette NEED TO ADD ANCHOR TAGS ONCE PUSHED TO GITHUB -->
+		<!-- Third Featurette -->
 		<div class="featurette" id="third">
-			<a href="https://www.facebook.com/sharer/sharer.php?u=https://jding99.github.io/CleanWaterAdvocacyCampaign/" target = "_blank"> <img class="featurette-image img-circle img-responsive pull-right" src="img/facebook-share.png" height="200" width="200">
-			</a>
-			<a href = "https://twitter.com/share?text=EPA Director Scott Pruitt is trying to dismantle the Clean Water Act. Help me stop him:&url=https://jding99.github.io/CleanWaterAdvocacyCampaign/&#=cleanwater" <img class="featurette-image img-circle img-responsive pull-right" src="img/twitter-share.png" height="200" width="200">
-			</a>
-			<!-- <img class="featurette-image img-circle img-responsive pull-right" src="img/email-share.png" height="200" width="200"> -->
 			<h2 class="featurette-heading">Let's Save Our Water. Together.
 				<span class="text-muted">Share this campaign to amplify your voice!</span>
 			</h2>
 		</div>
-<!-- 
-<div class="container standAlone">
-    <div class="row">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://marchonhealth.com/" target="_blank">
-        <img src="../assets/share/facebook-share.png" class="social">
-      </a>
-      <a href="http://twitter.com/share?text=The fight to save healthcare is not over:&url=https://marchonhealth.com/&hashtags=BuryTheBill,MarchOnHealth" target="_blank">
-        <img src="../assets/share/twitter-share.png" class="social">
-      </a>
-    </div>
 
-	</div> -->
-	<!-- /.container -->
+		<div class = "featurette" id="fourth">
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https://jding99.github.io/CleanWaterAdvocacyCampaign/" target = "_blank"> <img class="featurette-image img-circle img pull-left" src="img/facebook-share.png" height="200" width="200">
+			</a>
+			<a href = "https://twitter.com/share?text=EPA Director Scott Pruitt is trying to dismantle the Clean Water Act. Help me stop him:&url=https://jding99.github.io/CleanWaterAdvocacyCampaign/&#=cleanwater" target = "_blank"> <img class="featurette-image img-circle img pull-right" src="img/twitter-share.png" height="200" width="200">
+			</a>
+		</div>
 
 	<!-- Represently footer and privacy policy -->
-	<div class="container standAlone">
+	<div class="featurette" id="fifth">
 		<h5>Powered by:</h5>
-		<img class="img-responsive" src ="img/representlyfooter.png">
+		<img class="img-responsive" src ="img/Representlyfooter.png">
 		<a href="https://s3.amazonaws.com/representlypopupsprivacypolicy/privacy-policy-popups.pdf" target="_blank"><h5 class="privacy">Privacy</h5></a>
 	</div>
 
