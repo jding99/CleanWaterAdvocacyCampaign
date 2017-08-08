@@ -85,20 +85,33 @@
 	 </form>
 
   	<script type="text/javascript">
-  // Form submission redirect
-  		$(function() {
-    	$('#gform').submit(function(){
-      	$.post($(this).attr('action'), $(this).serialize(), function() {
-        // window.location.href = "https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001" 
-        window.open('https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001','_blank')
-      	});
-      	return false;
-    	});
+  // // Form submission redirect v1
+  // 		$(function() {
+  //   	$('#gform').submit(function(){
+  //     	$.post($(this).attr('action'), $(this).serialize(), function() {
+  //       // window.location.href = "https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001" 
+  //       window.open('https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001','_blank')
+  //     	});
+  //     	return false;
+  //   	});
 
-
-
+	$(function() {
+		$('#gform').submit(function(){
+		$.post($(this).attr('action'), $(this).serialize(), function() {
+	    var redirectWindow = window.open('https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001','_blank')
+		});
+	    $.ajax({
+	        type: 'POST',
+	        url: '/echo/json/',
+	        success: function (data) {
+	            redirectWindow.location;
+	        }
+	    });
+	});
   	});
+
   </script>
+  
 		<hr class="featurette-divider">
 		<!-- Second Featurette -->
 		<div class="featurette" id="second">
