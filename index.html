@@ -45,20 +45,18 @@
 	<!-- Page Content -->
 	<div class="container">
 
-
-
 		<!-- First Featurette -->
 		<div class="featurette" id="first">
 			<h2 class="featurette-heading">EPA Director Scott Pruitt is trying to dismantle the Clean Water Act.
 			  <br />
 				<span class="text-muted">Tell him how much you care about clean water.</span>
 			</h2>
-			<p align = "center" class="lead">Enter Email to Access Public Comment Form</p>
+			<a id = "ShareStory"> <p align = "center" class="lead">Enter Email to Access Public Comment Form</p> </a>
 		</div>
 
 		<!-- Email Form  -->
 
-	<form id="gform" action="https://script.google.com/macros/s/AKfycbxhCDdhv_jaei4ljNZcb_tFoeBCJIp70VVBdwnosPviLeUdwYoi/exec" method="post" align = "center"> 
+	<form id="gform" action="https://script.google.com/macros/s/AKfycbxhCDdhv_jaei4ljNZcb_tFoeBCJIp70VVBdwnosPviLeUdwYoi/exec" method="post" align = "center">
 		<fieldset class="pure-group">
 		  <label for="first_name">First Name: </label>
 		  <input id="first_name" name="first_name"/>
@@ -91,10 +89,14 @@
   		$(function() {
     	$('#gform').submit(function(){
       	$.post($(this).attr('action'), $(this).serialize(), function() {
-        window.location.href = "https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001"
+        // window.location.href = "https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001" 
+        window.open('https://www.regulations.gov/comment?D=EPA-HQ-OW-2017-0203-0001','_blank')
       	});
       	return false;
     	});
+
+
+
   	});
   </script>
 		<hr class="featurette-divider">
@@ -102,10 +104,12 @@
 		<div class="featurette" id="second">
 			<img class="featurette-image img-responsive" src="img/fishingcleanwater.jpg" id='pic'>
 			<h2 class="featurette-heading">We will direct you to the EPA's commenting portal where you can 
-				<span class="text-muted">share your story.</span>
+				<span class="text-muted">
+				<a href="#ShareStory">share your story.</a>
+				</span>
 			</h2>
 			<img class="featurette-image img-responsive pull-left" src="img/regulationscommentpreview.png" id='pic'>
-			<p class="lead">This is one of over 2000 comments submitted, so far, in support of the Clean Water Act</p>
+			<p class="lead">This is one of over 14,000 comments submitted, so far, in support of the Clean Water Act</p>
 		</div>
 
 		<hr class="featurette-divider">
@@ -120,14 +124,14 @@
 		<div class = "featurette" id="fourth">
 			<a href="https://www.facebook.com/sharer/sharer.php?u=https://jding99.github.io/CleanWaterAdvocacyCampaign/" target = "_blank"> <img class="featurette-image img-circle img pull-left" src="img/facebook-share.png" height="200" width="200">
 			</a>
-			<a href = "https://twitter.com/share?text=EPA Director Scott Pruitt is trying to dismantle the Clean Water Act. Help me stop him:&url=https://jding99.github.io/CleanWaterAdvocacyCampaign/&#=cleanwater" target = "_blank"> <img class="featurette-image img-circle img pull-right" src="img/twitter-share.png" height="200" width="200">
+			<a href = "https://twitter.com/share?text=EPA Director Scott Pruitt is trying to dismantle the Clean Water Act. Help me stop him:&url=https://jding99.github.io/CleanWaterAdvocacyCampaign/&hashtags=CleanWater, WaterDefenders" target = "_blank"> <img class="featurette-image img-circle img pull-right" src="img/twitter-share.png" height="200" width="200">
 			</a>
 		</div>
 
 	<!-- Represently footer and privacy policy -->
-	<div class="featurette" id="fifth">
+	<div class="featurette" id="fifth" align = "center">
 		<h5>Powered by:</h5>
-		<img class="img-responsive" src ="img/Representlyfooter.png">
+		<img class="img-responsive" src ="img/Representlyfooter.png" width="400" height="80">
 		<a href="https://s3.amazonaws.com/representlypopupsprivacypolicy/privacy-policy-popups.pdf" target="_blank"><h5 class="privacy">Privacy</h5></a>
 	</div>
 
